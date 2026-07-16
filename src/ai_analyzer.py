@@ -31,14 +31,14 @@ Subject: Запрос по договору
 Нужна помощь с актуальным статусом договора. Пожалуйста, предоставьте информацию о текущем состоянии и сроках выполнения.
 """
 
-# Что мы собственно хотим получить от аишника...
+# Что мы собственно хотим получить от аишника в этом случае он пишет НАМ что было в письме и какие рекомендуемые действия...
 class EmailAnalysis(BaseModel):
     summary: str = Field(..., description="Краткое содержание письма")
     key_requests: list[str] = Field(..., description="Основные запросы или вопросы, содержащиеся в письме")
     needs_follow_up: bool = Field(..., description="Нужно ли отправлять follow-up письмо")
     follow_up_suggestions: list[str] = Field(..., description="Предложения по follow-up письму, если нужно")
 
-def analyze_email_structured(email_text: str SAMPLE_EMAIL_TEXT) -> EmailAnalysis:
+def analyze_email_structured(email_text: str = SAMPLE_EMAIL_TEXT) -> EmailAnalysis:
     if genai is None:
         raise ImportError("google.generativeai module is not installed. Please install it to use this function.")
 
