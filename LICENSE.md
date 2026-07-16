@@ -1,4 +1,4 @@
-GNU AFFERO GENERAL PUBLIC LICENSE
+                    GNU AFFERO GENERAL PUBLIC LICENSE
                        Version 3, 19 November 2007
 
  Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
@@ -8,12 +8,12 @@ GNU AFFERO GENERAL PUBLIC LICENSE
                             Preamble
 
   The GNU Affero General Public License is a free, copyleft license for
-software and other kinds of works specifically designed to ensure
+software and other kinds of works, specifically designed to ensure
 cooperation with the community in the case of network server software.
 
   The licenses for most software and other practical works are designed
 to take away your freedom to share and change the works.  By contrast,
-the GNU General Public Licenses are intended to guarantee your freedom to
+our General Public Licenses are intended to guarantee your freedom to
 share and change all versions of a program--to make sure it remains free
 software for all its users.
 
@@ -24,34 +24,34 @@ them if you wish), that you receive source code or can get it if you
 want it, that you can change the software or use pieces of it in new
 free programs, and that you know you can do these things.
 
-  Developers that use the GNU General Public Licenses protect your rights
+  Developers that use our General Public Licenses protect your rights
 with two steps: (1) assert copyright on the software, and (2) offer
 you this License which gives you legal permission to copy, distribute
-and/or modify it.
+and/or modify the software.
 
-  A secondary benefit of defending all users' rights is that improve-
-ments made in alternate versions of the program, if they receive wide-
-spread use, become available for other developers to consider.  Many
-developers of free software are heartened and encouraged by the resulting
-cooperation.  However, in the case of software used on network servers,
-there is a common loophole, which is that a modified version of the
-program can be run on a server, providing service to users over the
-network, without those users ever receiving a copy of the program.  The
-GNU Affero General Public License is designed specifically to prevent this
-loophole from affecting community development.
+  A secondary benefit of defending all users' freedom is that
+improvements made in alternate versions of the program, if they
+receive widespread use, become available for other developers to
+incorporate.  Many developers of free software are heartened and
+encouraged by the resulting cooperation.  However, in the case of
+software used on network servers, this result may fail to come about.
+The GNU General Public License permits making a modified version and
+letting the public access it on a server without ever releasing its
+source code to the public.
 
-  The GNU Affero General Public License designed specifically for use on
-network servers, ensures that modified source code becomes available to
-the community.  It requires the operator of a network server to provide
-the source code of the modified version to users of that server.
-Therefore, public use of a modified version, on a public server, gives
-the public access to the source code of the modified version.
+  The GNU Affero General Public License is designed specifically to
+ensure that, in such cases, the modified source code becomes available
+to the community.  It requires the operator of a network server to
+provide the source code of the modified version running there to the
+users of that server.  Therefore, public use of a modified version, on
+a publicly accessible server, gives the public access to the source
+code of the modified version.
 
   An older license, called the Affero General Public License and
-published by Affero, Inc., was designed to accomplish a similar goal.
-This is a different license, not a version of the Affero GPL, but Affero
-has released a new version of the Affero GPL which permits relicensing
-under this License.
+published by Affero, was designed to accomplish similar goals.  This is
+a different license, not a version of the Affero GPL, but Affero has
+released a new version of the Affero GPL which permits relicensing under
+this license.
 
   The precise terms and conditions for copying, distribution and
 modification follow.
@@ -167,9 +167,10 @@ makes it unnecessary.
   3. Protecting Users' Legal Rights From Anti-Circumvention Law.
 
   No covered work shall be deemed part of an effective technological
-measure under any law fulfilling obligations under article 11 of the
-WIPO copyright treaty adopted on 20 December 1996, or similar laws
-prohibiting or restricting circumvention of such measures.
+measure under any applicable law fulfilling obligations under article
+11 of the WIPO copyright treaty adopted on 20 December 1996, or
+similar laws prohibiting or restricting circumvention of such
+measures.
 
   When you convey a covered work, you waive any legal power to forbid
 circumvention of technological measures to the extent such circumvention
@@ -212,7 +213,7 @@ terms of section 4, provided that you also meet all of these conditions:
     additional terms, to the whole of the work, and all its parts,
     regardless of how they are packaged.  This License gives no
     permission to license the work in any other way, but it does not
-    invalidate such permission if you have received it separately.
+    invalidate such permission if you have separately received it.
 
     d) If the work has interactive user interfaces, each must display
     Appropriate Legal Notices; however, if the Program has interactive
@@ -233,7 +234,7 @@ parts of the aggregate.
 
   You may convey a covered work in object code form under the terms
 of sections 4 and 5, provided that you also convey the
-Machine-readable Corresponding Source under the terms of this License,
+machine-readable Corresponding Source under the terms of this License,
 in one of these ways:
 
     a) Convey the object code in, or embodied in, a physical product
@@ -256,8 +257,8 @@ in one of these ways:
     c) Convey individual copies of the object code with a copy of the
     written offer to provide the Corresponding Source.  This
     alternative is allowed only occasionally and noncommercially, and
-    only if you received the object code with such an offer, in
-    accord with subsection 6b.
+    only if you received the object code with such an offer, in accord
+    with subsection 6b.
 
     d) Convey the object code by offering access from a designated
     place (gratis or for a charge), and offer equivalent access to the
@@ -267,10 +268,10 @@ in one of these ways:
     copy the object code is a network server, the Corresponding Source
     may be on a different server (operated by you or a third party)
     that supports equivalent copying facilities, provided you maintain
-    clear directions next to the object code saying where the
-    Corresponding Source is found.  Regardless of what server hosts
-    the Corresponding Source, you remain obligated to ensure that it
-    is available for as long as needed to satisfy these requirements.
+    clear directions next to the object code saying where to find the
+    Corresponding Source.  Regardless of what server hosts the
+    Corresponding Source, you remain obligated to ensure that it is
+    available for as long as needed to satisfy these requirements.
 
     e) Convey the object code using peer-to-peer transmission, provided
     you inform other peers where the object code and Corresponding
@@ -383,9 +384,9 @@ of that license document, provided that the further restriction does
 not survive such relicensing or conveying.
 
   If you add terms to a covered work in accord with this section, you
-must place in the relevant source files a statement of the additional
-terms that apply to those files, or a notice indicating where to find
-the applicable terms.
+must place, in the relevant source files, a statement of the
+additional terms that apply to those files, or a notice indicating
+where to find the applicable terms.
 
   Additional terms, permissive or non-permissive, may be stated in the
 form of a separately written license, or stated as exceptions;
@@ -464,8 +465,8 @@ work thus licensed is called the contributor's "contributor version".
   A contributor's "essential patent claims" are all patent claims
 owned or controlled by the contributor, whether already acquired or
 hereafter acquired, that would be infringed by some manner, permitted
-by this License, of making, using, or selling its contributor
-version, but do not include claims that would be infringed only as a
+by this License, of making, using, or selling its contributor version,
+but do not include claims that would be infringed only as a
 consequence of further modification of the contributor version.  For
 purposes of this definition, "control" includes the right to grant
 patent sublicenses in a manner consistent with the requirements of
@@ -516,7 +517,7 @@ the work, and under which the third party grants, to any of the
 parties who would receive the covered work from you, a discriminatory
 patent license (a) in connection with copies of the covered work
 conveyed by you (or copies made from those copies), or (b) primarily
-for or in connection with specific products or compilations that
+for and in connection with specific products or compilations that
 contain the covered work, unless you entered into that arrangement,
 or that patent license was granted, prior to 28 March 2007.
 
@@ -531,7 +532,7 @@ otherwise) that contradict the conditions of this License, they do not
 excuse you from the conditions of this License.  If you cannot convey a
 covered work so as to satisfy simultaneously your obligations under this
 License and any other pertinent obligations, then as a consequence you may
-not convey it at all.  For example, if you agree to terms that oblige you
+not convey it at all.  For example, if you agree to terms that obligate you
 to collect a royalty for further conveying from those to whom you convey
 the Program, the only way you could satisfy both those terms and this
 License would be to refrain entirely from conveying the Program.
@@ -540,23 +541,121 @@ License would be to refrain entirely from conveying the Program.
 
   Notwithstanding any other provision of this License, if you modify the
 Program, your modified version must prominently offer all users
-interacting with it remotely through a computer network (if your
-version supports such interaction) an opportunity to receive the
-Corresponding Source of your version by providing access to the
-Corresponding Source from a network server at no charge, through some
-standard or customary means of facilitating copying of source.  This
-Corresponding Source shall include the Corresponding Source for any work
-covered by version 3 of the GNU General Public License that is incorpo-
-rated pursuant to the following paragraph.
+interacting with it remotely through a computer network (if your version
+supports such interaction) an opportunity to receive the Corresponding
+Source of your version by providing access to the Corresponding Source
+from a network server at no charge, through some standard or customary
+means of facilitating copying of software.  This Corresponding Source
+shall include the Corresponding Source for any work covered by version 3
+of the GNU General Public License that is incorporated pursuant to the
+following paragraph.
 
-  You may arrange a literal combination of a covered work with a work
-licensed under version 3 of the GNU General Public License into a single
-combined work, and convey the resulting work.  The terms of this License
-will continue to apply to the part which is the covered work, but the
-work with which it is combined will remain governed by version 3 of the
-GNU General Public License.
+  Notwithstanding any other provision of this License, you have
+permission to link or combine any covered work with a work licensed
+under version 3 of the GNU General Public License into a single
+combined work, and to convey the resulting work.  The terms of this
+License will continue to apply to the part which is the covered work,
+but the work with which it is combined will remain governed by version
+3 of the GNU General Public License.
 
   14. Revised Versions of this License.
 
-  The Free Software Foundation may publish revised and/or new versions
-of the GNU Affero General Public License from time to timeNormally I can help with things like this, but I don't seem to have access to that content. You can try again or ask me for something else.
+  The Free Software Foundation may publish revised and/or new versions of
+the GNU Affero General Public License from time to time.  Such new versions
+will be similar in spirit to the present version, but may differ in detail to
+address new problems or concerns.
+
+  Each version is given a distinguishing version number.  If the
+Program specifies that a certain numbered version of the GNU Affero General
+Public License "or any later version" applies to it, you have the
+option of following the terms and conditions either of that numbered
+version or of any later version published by the Free Software
+Foundation.  If the Program does not specify a version number of the
+GNU Affero General Public License, you may choose any version ever published
+by the Free Software Foundation.
+
+  If the Program specifies that a proxy can decide which future
+versions of the GNU Affero General Public License can be used, that proxy's
+public statement of acceptance of a version permanently authorizes you
+to choose that version for the Program.
+
+  Later license versions may give you additional or different
+permissions.  However, no additional obligations are imposed on any
+author or copyright holder as a result of your choosing to follow a
+later version.
+
+  15. Disclaimer of Warranty.
+
+  THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY
+APPLICABLE LAW.  EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT
+HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM "AS IS" WITHOUT WARRANTY
+OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO,
+THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+PURPOSE.  THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM
+IS WITH YOU.  SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF
+ALL NECESSARY SERVICING, REPAIR OR CORRECTION.
+
+  16. Limitation of Liability.
+
+  IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING
+WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MODIFIES AND/OR CONVEYS
+THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY
+GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE
+USE OR INABILITY TO USE THE PROGRAM (INCLUDING BUT NOT LIMITED TO LOSS OF
+DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD
+PARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS),
+EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF
+SUCH DAMAGES.
+
+  17. Interpretation of Sections 15 and 16.
+
+  If the disclaimer of warranty and limitation of liability provided
+above cannot be given local legal effect according to their terms,
+reviewing courts shall apply local law that most closely approximates
+an absolute waiver of all civil liability in connection with the
+Program, unless a warranty or assumption of liability accompanies a
+copy of the Program in return for a fee.
+
+                     END OF TERMS AND CONDITIONS
+
+            How to Apply These Terms to Your New Programs
+
+  If you develop a new program, and you want it to be of the greatest
+possible use to the public, the best way to achieve this is to make it
+free software which everyone can redistribute and change under these terms.
+
+  To do so, attach the following notices to the program.  It is safest
+to attach them to the start of each source file to most effectively
+state the exclusion of warranty; and each file should have at least
+the "copyright" line and a pointer to where the full notice is found.
+
+    <one line to give the program's name and a brief idea of what it does.>
+    Copyright (C) <year>  <name of author>
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+Also add information on how to contact you by electronic and paper mail.
+
+  If your software can interact with users remotely through a computer
+network, you should also make sure that it provides a way for users to
+get its source.  For example, if your program is a web application, its
+interface could display a "Source" link that leads users to an archive
+of the code.  There are many ways you could offer source, and different
+solutions will be better for different programs; see section 13 for the
+specific requirements.
+
+  You should also get your employer (if you work as a programmer) or school,
+if any, to sign a "copyright disclaimer" for the program, if necessary.
+For more information on this, and how to apply and follow the GNU AGPL, see
+<https://www.gnu.org/licenses/>.
