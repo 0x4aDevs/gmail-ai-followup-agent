@@ -1,0 +1,6 @@
+google-genai>=0.1.1        # Официальный SDK для работы с Gemini API
+pydantic>=2.0              # Для создания схем JSON (структурированный вывод ИИ)
+google-api-python-client   # Официальный клиент Google API для Python
+google-auth-httplib2       # Библиотека аутентификации Google
+google-auth-oauthlib       # Для OAuth2 авторизации в браузезере
+python-dotenv              # Для хранения ключей в файле .env
