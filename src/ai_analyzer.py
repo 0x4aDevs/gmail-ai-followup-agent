@@ -37,6 +37,7 @@ class EmailAnalysis(BaseModel):
     key_requests: list[str] = Field(..., description="Основные запросы или вопросы, содержащиеся в письме")
     needs_follow_up: bool = Field(..., description="Нужно ли отправлять follow-up письмо")
     follow_up_suggestions: list[str] = Field(..., description="Предложения по follow-up письму, если нужно")
+    rank: int = Field(..., description="Рейтинг письма по важности (1-10)")
 
 def analyze_email_structured(email_text: str = SAMPLE_EMAIL_TEXT) -> EmailAnalysis:
     if genai is None:
@@ -51,22 +52,25 @@ def analyze_email_structured(email_text: str = SAMPLE_EMAIL_TEXT) -> EmailAnalys
     # Используем ИИшник который нам доступен, в данном случае Геминий ( я надеюсь не ошибся с названием модели...)
     model = genai.GenerativeModel("gemini-3.1")
 
-    prompt = (
-        "Ты помощник который анализирует электронные письма. Твоя задача - прочитать письмо и предоставить структурированный анализ в формате JSON, который соответствует следующей схеме:\n
-        f"Текст письма: \n{email_text}"
-        {
-            'summary': 'Краткое содержание письма',
-            'key_requests': ['Основные запросы или вопросы, содержащиеся в письме'],
-            'needs_follow_up': true/false,
-            'follow_up_suggestions': ['Предложения по follow-up письму, если нужно']
-        }\n"
+    prompt = ( 
+        "Ты помощник который анализирует электронные письма."
+        "Твоя задача - прочитать письмо и предоставить структурированный анализ в формате JSON, который соответствует следующей схеме:\n"
+        f"Текст письма: \n{email_text}\n\n"
+        "Заполни структуру следующими данными:\n"
+        "{\n"
+        "  'summary': 'Краткое содержание',\n"
+        "  'key_requests': ['Основные запросы или вопросы, содержащиеся в письме'],\n"
+        "  'needs_follow_up': true/false,\n"
+        "  'follow_up_suggestions': ['Предложения по follow-up письму, если нужно'],\n"
+        "  'rank': 1-10\n"
+        "}"
     )
 
-    response = model.generate.content(
+    response = model.generate_content(
         prompt,
         generation_config=genai_types.GenerationConfig(
             response_mime_type="application/json",
-            response_schema=EmailAnalysis.schema_json()
+            response_schema=EmailAnalysis,
         ),
     )
     return response.text
