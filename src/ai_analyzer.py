@@ -1,50 +1,61 @@
-import os
+import os 
+from pydantic import BaseModel, Field
 
 try:
     import google.generativeai as genai
-except ImportError:  # pragma: no cover - dependency is optional until installed
+    import google.generativeai.types as genai_types
+except ImportError:
     genai = None
-
+    genai_types = None
 
 SAMPLE_EMAIL_TEXT = """
 Subject: Запрос по договору
 
 Здравствуйте,
 
-Нужна помощь с актуальным статусом по договору №12345.
-Мы уже обсуждали сроки и хотели бы понять, когда можно ожидать финальный ответ.
+Нужна помощь с актуальным статусом договора. Пожалуйста, предоставьте информацию о текущем состоянии и сроках выполнения.
 """
 
+# Что мы собственно хотим получить от аишника...
+class EmailAnalysis(BaseModel):
+    summary: str = Field(..., description="Краткое содержание письма")
+    key_requests: list[str] = Field(..., description="Основные запросы или вопросы, содержащиеся в письме")
+    needs_follow_up: bool = Field(..., description="Нужно ли отправлять follow-up письмо")
+    follow_up_suggestions: list[str] = Field(..., description="Предложения по follow-up письму, если нужно")
 
-def send_email_to_gemini(email_text: str = SAMPLE_EMAIL_TEXT) -> str:
-    """
-    Отправляет текст письма в Gemini.
-
-    Параметры:
-        email_text: текст письма. По умолчанию используется заглушка в коде.
-
-    Возвращает:
-        строковый ответ модели Gemini.
-    """
+def analyze_email_structured(email_text: str SAMPLE_EMAIL_TEXT) -> EmailAnalysis:
     if genai is None:
-        raise ImportError("Установите зависимость `google-generativeai`.")
+        raise ImportError("google.generativeai module is not installed. Please install it to use this function.")
 
     api_key = os.getenv("GEMINI_API_KEY")
     if not api_key:
-        raise ValueError("Переменная окружения GEMINI_API_KEY не задана.")
+        raise ValueError("GEMINI_API_KEY is not set in the environment variables.") 
 
     genai.configure(api_key=api_key)
-    model = genai.GenerativeModel("gemini-1.5-flash")
+
+    # Используем ИИшник который нам доступен, в данном случае Геминий ( я надеюсь не ошибся с названием модели...)
+    model = genai.GenerativeModel("gemini-3.1")
 
     prompt = (
-        "Ты — помощник, который анализирует электронные письма. "
-        "Сделай краткое резюме письма и выдели ключевой запрос клиента.\n\n"
-        f"Текст письма:\n{email_text}"
+        "Ты помощник который анализирует электронные письма. Твоя задача - прочитать письмо и предоставить структурированный анализ в формате JSON, который соответствует следующей схеме:\n
+        f"Текст письма: \n{email_text}"
+        {
+            'summary': 'Краткое содержание письма',
+            'key_requests': ['Основные запросы или вопросы, содержащиеся в письме'],
+            'needs_follow_up': true/false,
+            'follow_up_suggestions': ['Предложения по follow-up письму, если нужно']
+        }\n"
     )
 
-    response = model.generate_content(prompt)
+    response = model.generate.content(
+        prompt,
+        generation_config=genai_types.GenerationConfig(
+            response_mime_type="application/json",
+            response_schema=EmailAnalysis.schema_json()
+        ),
+    )
     return response.text
 
-
 if __name__ == "__main__":
-    print(send_email_to_gemini())
+    json_result = analyze_email_structured()
+    print(json_result)
